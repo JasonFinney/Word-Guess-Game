@@ -47,13 +47,14 @@ document.onkeyup = function (event) {
         loss++;
         document.querySelector(".Losses").innerHTML = loss;
         alert("You were eaten by a Tyrannosarus Rex! Play Again??");
-        guesses += 10;
+        guesses = 10;
+        document.querySelector(".guesses-remaining").innerHTML = guesses;
         lettersGuessed.length = 0;
         answerArray.length = 0;
         document.querySelector(".letters-guessed").innerHTML = lettersGuessed;
-        var compGuess = Words[Math.floor(Math.random() * Words.length)];
+        compGuess = Words[Math.floor(Math.random() * Words.length)];
         console.log(compGuess);
-        var SplitcompGuess = compGuess.split("");
+        SplitcompGuess = compGuess.split("");
         console.log(SplitcompGuess);
         for (var i = 0; i < compGuess.length; i++) {
             answerArray[i] = "_";
@@ -65,13 +66,14 @@ document.onkeyup = function (event) {
         win++;
         document.querySelector(".Wins").innerHTML = win;
         alert("Why hello there, Dr. Ian Malcolm. I guess you found a way!");
-        guesses += 10;
+        guesses = 10;
+        document.querySelector(".guesses-remaining").innerHTML = guesses;
         lettersGuessed.length = 0;
         answerArray.length = 0;
         document.querySelector(".letters-guessed").innerHTML = lettersGuessed;
-        var compGuess = Words[Math.floor(Math.random() * Words.length)];
+        compGuess = Words[Math.floor(Math.random() * Words.length)];
         console.log(compGuess);
-        var SplitcompGuess = compGuess.split("");
+        SplitcompGuess = compGuess.split("");
         console.log(SplitcompGuess);
         for (var i = 0; i < compGuess.length; i++) {
             answerArray[i] = "_";
