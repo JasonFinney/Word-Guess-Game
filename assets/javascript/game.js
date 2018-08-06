@@ -9,7 +9,7 @@ document.querySelector(".guesses-remaining").innerHTML = guesses;
 var lettersGuessed = [];
 document.querySelector(".letters-guessed").innerHTML = lettersGuessed;
 
-var Words = ["triceratops", "pterodactyl", "raptor", "brachiosaurus"];
+var Words = ["triceratops", "pterodactyl", "raptor", "brachiosaurus", "allosaurus", "apatosaurus", "stegosaurus", "sauropods", "diplodocus", "iguanodon"];
 var compGuess = Words[Math.floor(Math.random() * Words.length)];
 console.log(compGuess);
 var SplitcompGuess = compGuess.split("");
