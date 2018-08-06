@@ -19,6 +19,10 @@ html {
     border-width: 5px;
 }
 
+.row3{
+    background: none;
+}
+
   h4 {
       float: left;
       font-family: 'Jurassic Park';
@@ -55,40 +59,36 @@ html {
       font-size: 50px;
       display: block;
       color: red;
-
       padding: 20px;
       text-align: center;
       width: 100%;
   }
 
   h3 {
-      float: left;
       font-family: 'Jurassic Park';
       color: red;
-
       font-size: 30px;
       padding: 10px;
       text-align: center;
   }
 
   .current-word{
-    float: left;
     font-family: 'Jurassic Park';
     color: red;
     text-align: center;
     font-size: 30px;
   }
   .guesses-remaining{
-    float: left;
     font-family: 'Jurassic Park';
     color: red;
     text-align: center;
     font-size: 30px;
+    padding: 10px;
   }
   .letters-guessed {
-      float: left;
       font-family: 'Jurassic Park';
       color: red;
       text-align: center;
       font-size: 30px;
+      padding: 10px;
   }
