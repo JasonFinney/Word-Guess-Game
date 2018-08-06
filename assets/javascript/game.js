@@ -1,4 +1,4 @@
-var RandomWord = ["random", "words", "face",];
+var Words = ["triceratops", "pterodactyl", "raptor", "brachiosaurus"];
 
 var randomArray;
 
@@ -13,14 +13,51 @@ var loss = 0;
 
 var lettersGuessed = [];
 
+var answerArray = [];
+
+// function NewGame() {
+
+//     var compGuess = Words[Math.floor(Math.random() * Words.length)];
+//     console.log(compGuess);
+
+//     var answerArray = [];
+//     for (var i = 0; i < compGuess.length; i++) {
+//         answerArray[i] = "_";
+//     }
+//     var remainingLetters = compGuess.length;
+
+//     document.querySelector(".Wins").innerHTML = win;
+//     document.querySelector(".Losses").innerHTML = loss;
+//     document.querySelector(".guesses-remaining").innerHTML = guesses;
+
+//     while (remainingLetters > 0) {
+//         document.querySelector(".current-word").innerHTML = answerArray.join(" ");
+//         document.onkeyup = function (event) {
+//             var attempt = event.key;
+//             for (var j = 0; j < word.length; j++) {
+//                 if (compGuess[j] === attempt) {
+//                     answerArray[j] = attempt;
+//                     remainingLetters--;
+//                 } else {
+//                     guesses--;
+//                 }
+//             }
+//             if (guesses === 0) {
+//                 loss++;
+//                 document.querySelector(".Losses").innerHTML = loss;
+//                 alert("You lose! Play again??")
+//             }
+//         }
+//     }
+// }
 function NewGame() {
 
-    var computerGuess = RandomWord[Math.floor(Math.random() * RandomWord.length)];
+    var computerGuess = Words[Math.floor(Math.random() * Words.length)];
 
     document.querySelector(".Wins").innerHTML = win;
     document.querySelector(".Losses").innerHTML = loss;
     document.querySelector(".guesses-remaining").innerHTML = guesses;
-    document.querySelector(".letter-guessed").innerHTML = lettersGuessed;
+
 
     randomArray = computerGuess.split("")
     console.log(randomArray);
@@ -32,34 +69,30 @@ function NewGame() {
     document.querySelector(".current-word").innerHTML = _array.join(" ");
 }
 
-
-document.onkeyup = function Try(event) {
-    document.querySelector(".Wins").innerHTML = win;
-    document.querySelector(".Losses").innerHTML = loss;
+document.onkeyup = function (event) {
+    var attempt = event.key;
     document.querySelector(".guesses-remaining").innerHTML = guesses;
     document.querySelector(".letter-guessed").innerHTML = lettersGuessed;
-    _array1 = [];
-    lettersGuessed = [];
-
-    var attempt = event.key;
     if (randomArray.includes(attempt)) {
-        console.log(attempt);
-        for (var o = 0; o < randomArray.length; o++) {
-            _array1.push("_");
-        }
-        _array1.push(attempt);
+        console.log(attempt + " is Right!");
     } else {
-        for (var o = 0; o < randomArray.length; o++) {
-            _array1.push("_");
-        }
-        console.log("Wrong! " + attempt);
+        console.log(attempt + " is Wrong!");
+        guesses--;
         lettersGuessed.push(attempt);
     }
-    document.querySelector(".current-word").innerHTML = _array1.join(" ");
+
 }
 
+// for (var j = 0; j < Words.length; j++) {
+//     if (word[j] === event.key) {
+//      answerArray[j] = event.key;
+//     remainingLetters--;
+//      }
 
-NewGame()
+
+// lettersGuessed.shift();
+
+// NewGame()
 
 
 // document.onkeyup = function (event) {}

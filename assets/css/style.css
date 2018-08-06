@@ -1,0 +1,94 @@
+body {
+    background-image:url("Jurassic\ img.jpg");
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+}
+html {
+    height: 100%
+}
+
+@font-face {
+    font-family: 'Jurassic Park';
+    src: url('Jurassic\ Park.ttf');
+  }
+
+.row {
+    background: rgba(0, 0, 0, .6);
+    border-style: double;
+    border-color: red;
+    border-width: 5px;
+}
+
+  h4 {
+      float: left;
+      font-family: 'Jurassic Park';
+      font-size: 40px;
+      width: 50px;
+      color: red;
+      padding: 10px;
+      margin: 10px;
+  }
+
+  .Wins {
+    float: left;
+    font-family: Times;
+    font-size: 30px;
+    width: 50px;
+    color: red;
+    padding: 10px;
+    position: relative;
+    left: 10px;
+  }
+  .Losses{
+    float: left;
+    font-family: times;
+    font-size: 30px;
+    width: 50px;
+    color: red;
+    padding: 10px;
+    position: relative;
+    left: 20px;
+  }
+
+  h1 {
+      font-family: 'Jurassic Park';
+      font-size: 50px;
+      display: block;
+      color: red;
+
+      padding: 20px;
+      text-align: center;
+      width: 100%;
+  }
+
+  h3 {
+      float: left;
+      font-family: 'Jurassic Park';
+      color: red;
+
+      font-size: 30px;
+      padding: 10px;
+      text-align: center;
+  }
+
+  .current-word{
+    float: left;
+    font-family: 'Jurassic Park';
+    color: red;
+    text-align: center;
+    font-size: 30px;
+  }
+  .guesses-remaining{
+    float: left;
+    font-family: 'Jurassic Park';
+    color: red;
+    text-align: center;
+    font-size: 30px;
+  }
+  .letters-guessed {
+      float: left;
+      font-family: 'Jurassic Park';
+      color: red;
+      text-align: center;
+      font-size: 30px;
+  }
