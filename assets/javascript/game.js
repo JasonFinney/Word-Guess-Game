@@ -3,6 +3,8 @@ var loss = 0;
 document.querySelector(".Wins").innerHTML = win;
 document.querySelector(".Losses").innerHTML = loss;
 
+var alphabet = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"];
+
 var guesses = 10;
 document.querySelector(".guesses-remaining").innerHTML = guesses;
 
@@ -24,7 +26,6 @@ document.querySelector(".current-word").innerHTML = answerArray.join(" ");
 
 document.onkeydown = function (event) {
     var attempt = event.key;
-    console.log(attempt);
     for (var i = 0; i < compGuess.length; i++) {
         if (attempt === compGuess[i]) {
             answerArray[i] = attempt;
@@ -33,13 +34,19 @@ document.onkeydown = function (event) {
         }
     }
     if (SplitcompGuess.includes(attempt) === false) {
-        console.log(attempt + " is Wrong!");
-        guesses--;
-        document.querySelector(".guesses-remaining").innerHTML = guesses;
-        lettersGuessed.push(attempt);
-        document.querySelector(".letters-guessed").innerHTML = lettersGuessed;
+        if (alphabet.includes(attempt)) {
+            var o = alphabet.indexOf(attempt);
+            console.log(o);
+            console.log(attempt + " is Wrong!");
+            guesses--;
+            document.querySelector(".guesses-remaining").innerHTML = guesses;
+            lettersGuessed.push(attempt);
+            document.querySelector(".letters-guessed").innerHTML = lettersGuessed;
+            alphabet.splice(o, 1);
+        }
     }
 }
+
 
 
 document.onkeyup = function (event) {
@@ -61,6 +68,7 @@ document.onkeyup = function (event) {
         }
         var remainingLetters = compGuess.length;
         document.querySelector(".current-word").innerHTML = answerArray.join(" ");
+        alphabet = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"];
     }
     if (answerArray.indexOf("_") === -1) {
         win++;
@@ -80,6 +88,7 @@ document.onkeyup = function (event) {
         }
         var remainingLetters = compGuess.length;
         document.querySelector(".current-word").innerHTML = answerArray.join(" ");
+        alphabet = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"];
     }
 }
 
