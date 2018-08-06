@@ -5,7 +5,7 @@ document.querySelector(".Losses").innerHTML = loss;
 
 var alphabet = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"];
 
-var guesses = 10;
+var guesses = 5;
 document.querySelector(".guesses-remaining").innerHTML = guesses;
 
 var lettersGuessed = [];
@@ -54,7 +54,7 @@ document.onkeyup = function (event) {
         loss++;
         document.querySelector(".Losses").innerHTML = loss;
         alert("You were eaten by a Tyrannosarus Rex! Play Again??");
-        guesses = 10;
+        guesses = 5;
         document.querySelector(".guesses-remaining").innerHTML = guesses;
         lettersGuessed.length = 0;
         answerArray.length = 0;
@@ -74,7 +74,7 @@ document.onkeyup = function (event) {
         win++;
         document.querySelector(".Wins").innerHTML = win;
         alert("Why hello there, Dr. Ian Malcolm. I guess you found a way!");
-        guesses = 10;
+        guesses = 5;
         document.querySelector(".guesses-remaining").innerHTML = guesses;
         lettersGuessed.length = 0;
         answerArray.length = 0;
